@@ -26,6 +26,9 @@ class ConnectFour {
     // this.cursor.setBackgroundColor();
     Screen.addCommand('a', 'move left', () => this.cursor.left());
     Screen.addCommand('d', 'move right', () => this.cursor.right());
+    Screen.addCommand('s', 'move down', () => this.cursor.down());
+    Screen.addCommand('w', 'move up', () => this.cursor.up());
+
     Screen.addCommand('space', 'drop piece', () => this.dropPiece());
 
     this.cursor.setBackgroundColor();
