@@ -39,6 +39,24 @@ class Cursor {
       Screen.render();
     }
   }
+
+  down() {
+    if (this.row < this.numRows - 1) {
+      this.resetBackgroundColor();
+      this.row++;
+      this.setBackgroundColor();
+      Screen.render();
+    }
+  }
+
+  up() {
+    if (this.row > 0) {
+      this.resetBackgroundColor();
+      this.row--;
+      this.setBackgroundColor();
+      Screen.render();
+    }
+  }
 }
 
 
