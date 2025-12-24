@@ -23,13 +23,22 @@ class Cursor {
   }
 
   left() {
-    // Move cursor left
+    if (this.col > 0) {
+      this.resetBackgroundColor();
+      this.col--;
+      this.setBackgroundColor();
+      Screen.render();
+    }
   }
 
   right() {
-    // Move cursor right
+    if (this.col < this.numCols - 1) {
+      this.resetBackgroundColor();
+      this.col++;
+      this.setBackgroundColor();
+      Screen.render();
+    }
   }
-
 }
 
 
